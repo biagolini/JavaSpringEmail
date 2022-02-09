@@ -1,0 +1,1 @@
+INSERT INTO PEDIDOS(email, descricao, valor) VALUES('c.biagolini@gmail.com', 'Pedido de um produto', 20.50);
