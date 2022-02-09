@@ -5,7 +5,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 public class Pedidos {
     
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,30 +20,12 @@ public class Pedidos {
     private String email;
     private String descricao;
     private Double valor;
-
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public String getEmail() {
-        return email;
-    }
-    public void setEmail(String email) {
+    
+    public Pedidos(String email, String descricao,Double valor){
         this.email = email;
-    }
-    public String getDescricao() {
-        return descricao;
-    }
-    public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-    public Double getValor() {
-        return valor;
-    }
-    public void setValor(Double valor) {
         this.valor = valor;
     }
+
 }
 
